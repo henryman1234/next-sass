@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --color-violet-400: theme("color-violet-400");
+    --color-fuchsia-400: theme("color-fuchsia-400");
+    --color-fuchsia-900:theme("color-fuchsia-900");
+    --color-amber-300: theme("color-amber-300");
+    --color-teal-300: theme("color-teal-300");
+    --color-indigo-900: theme("color-indigo-900");
+    --color-gray-950: theme("color-gray-950");
+    --color-border: theme("color-gray-200/20%");
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary:"Poetsen One", sans-serif;
+
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.absolute-center  {
+  @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2
 }
+
+.border-gradient {
+  @apply border-2 relative border-transparent [background:linear-gradient(var(--color-gray-950),var(--color-gray-950))_padding-box,conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-violet-400))_border-box]
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a;   
+     --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-gray-950);
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:639px) {
+  header, .container-hero, .companies-container, .features-container , .pricing-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* Specially for the hero section */
+@media screen and (min-width: 1021px) {
+  .container-hero2 {
+    padding-right: 18%;
+    padding-left:  18%
+  }
+
 }
