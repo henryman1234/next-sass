@@ -68,7 +68,7 @@ export const logos = [
 
 const Features = function () {
     return (
-        <section className="pb-20">
+        <section >
 
             <div className="container features-container mx-auto">
 

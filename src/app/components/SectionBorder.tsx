@@ -13,7 +13,7 @@ type SectionBorderProps = {
 
     const {className, borderTop, children, ...otherProps} = props
 
-    return <div className={twMerge("border-l border-r border-[var(--color-border)] relative", borderTop &&"border-t" ,className)} {...otherProps}>
+    return <div className={twMerge("border-l border-r border-[var(--color-border)] relative pb-5", borderTop &&"border-t" ,className)} {...otherProps}>
 
         {borderTop && <>
             <div className="absolute size-4 text-gray-200 left-0 top-0 -translate-x-1/2 -translate-y-1/2">

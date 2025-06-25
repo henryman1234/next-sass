@@ -40,7 +40,7 @@ export const companies = [
 
 const Companies = function () {
     return (
-        <section className="pb-[100px]">
+        <section >
 
             <div className="container mx-auto companies-container">
 

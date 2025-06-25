@@ -67,7 +67,7 @@ export const pricingTiers = [
 
 const Pricing = function () {
     return (
-        <section>
+        <section >
 
             <div className="container mx-auto pricing-container">
 
